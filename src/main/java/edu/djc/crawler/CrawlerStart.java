@@ -36,7 +36,7 @@ public class CrawlerStart {
         while (count <= 10){
             while((resultInQueueTop = Result.getQueue().poll()) != null)//resultsQueue.size()>0
             {
-
+                count = 0;
                 ResultDao.persistent(resultInQueueTop);
 //            resultInQueueTop = resultsQueue.poll();//从任务队列取出一个结果
                 ArrayList<FutureTask<Result>> tasks = new ArrayList<>();//创建任务列表
