@@ -32,7 +32,8 @@ public class CrawlerStart {
     {
         ResultDao.persistent(Result.getQueue().peek());//将种子爬取结果进行数据持久化
         Result resultInQueueTop = null;
-        while (true){
+        int count = 0;
+        while (count <= 10){
             while((resultInQueueTop = Result.getQueue().poll()) != null)//resultsQueue.size()>0
             {
 
@@ -84,7 +85,8 @@ public class CrawlerStart {
             }
             System.out.println("*********Already Crawled: "+Crawler.CrawlerID+" lemmas*********" + new Date());
             try {
-                Thread.sleep(100);
+                Thread.sleep(2000);
+                count++;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
