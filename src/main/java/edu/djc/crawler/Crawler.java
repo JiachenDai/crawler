@@ -10,6 +10,7 @@ public class Crawler implements Callable<Result> {
         this.url = url;
         System.out.println("ok");
         System.out.println("ok");
+        System.out.println("ok");
     }
 
     @Override
