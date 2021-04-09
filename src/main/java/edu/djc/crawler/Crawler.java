@@ -9,6 +9,7 @@ public class Crawler implements Callable<Result> {
     public Crawler(String url) {
         this.url = url;
         System.out.println("ok");
+        System.out.println("ok");
     }
 
     @Override
