@@ -13,6 +13,7 @@ public class Crawler implements Callable<Result> {
         System.out.println("test2");
         System.out.println("test222");
         System.out.println("idea");
+        System.out.println("branch Idea");
     }
 
     @Override
